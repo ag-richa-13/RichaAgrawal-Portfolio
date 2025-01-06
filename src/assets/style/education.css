@@ -1,0 +1,118 @@
+/* Education.css */
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap");
+#education {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 3rem 0;
+  background: #000;
+}
+
+#education h2 {
+  font-family: "Atma", system-ui;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: left;
+  color: #b6a28e; /* Pink color */
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: #120112;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 2px solid #f6f3f3;
+  box-shadow: rgba(67, 37, 68, 0.337) 0px 1px 2px,
+    rgba(67, 37, 68, 0.337) 0px 2px 4px, rgba(67, 37, 68, 0.337) 0px 4px 8px,
+    rgba(67, 37, 68, 0.337) 0px 8px 16px, rgba(67, 37, 68, 0.337) 0px 16px 32px,
+    rgba(67, 37, 68, 0.337) 0px 32px 64px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #270729;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #9b4de0, #f43f5e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card .institution {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9e9e9e;
+}
+
+.card .duration {
+  color: #ec4899; /* Pink color */
+  font-size: 0.875rem;
+}
+
+.card .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9e9e9e;
+}
+
+.card .grade {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #22c55e; /* Green color */
+}
+
+.card .icon {
+  color: #9b4de0; /* Purple icon */
+}
+
+.card .location-icon {
+  color: #ec4899; /* Pink location icon */
+}
+
+.card .institution,
+.card .location {
+  font-size: 1rem;
+}
+
+.card .location span,
+.card .institution span {
+  font-size: 1rem;
+}
+
+.card .motion {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.card.motion-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
